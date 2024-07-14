@@ -49,10 +49,10 @@ describe('API Kontrak Kasir AJA', () => {
 
     // 2. Read
     it('should retrieve a user detail by ID', async () => {
-        const uid = 'bfc984db-4548-4a88-9c2f-4185259e538f'; // Ganti dengan ID yang valid
+        const uid = 'bfc984db-4548-4a88-9c2f-4185259e538f';
 
         const response = await request(BASE_URL)
-            .get(`/users/${uid}`) // Ganti dengan endpoint read yang benar
+            .get(`/users/${uid}`)
             .set('Authorization', `Bearer ${token}`);
 
         expect(response.status).to.equal(200);
@@ -61,10 +61,10 @@ describe('API Kontrak Kasir AJA', () => {
 
     // 3. Update
     it('should update an user', async () => {
-        const uid = 'bfc984db-4548-4a88-9c2f-4185259e538f'; // Ganti dengan ID yang valid
+        const uid = 'bfc984db-4548-4a88-9c2f-4185259e538f';
 
         const response = await request(BASE_URL)
-            .put(`/users/${uid}`) // Ganti dengan endpoint update yang benar
+            .put(`/users/${uid}`)
             .set('Authorization', `Bearer ${token}`)
             .send({
                 name: 'update-user',
@@ -77,10 +77,10 @@ describe('API Kontrak Kasir AJA', () => {
 
     // 4. Delete
     it('should delete an user', async () => {
-        const uid = 'bfc984db-4548-4a88-9c2f-4185259e538f'; // Ganti dengan ID yang valid
+        const uid = 'bfc984db-4548-4a88-9c2f-4185259e538f';
 
         const response = await request(BASE_URL)
-            .delete(`/users/${uid}`) // Ganti dengan endpoint delete yang benar
+            .delete(`/users/${uid}`)
             .set('Authorization', `Bearer ${token}`);
 
         expect(response.status).to.equal(200);
